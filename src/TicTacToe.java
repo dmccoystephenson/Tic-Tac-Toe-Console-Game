@@ -22,13 +22,7 @@ public class TicTacToe {
 				System.out.println("You won!");
 				break;
 			}
-			
-			if (theGrid.checkIfThreeOInARow() == true) {
-				theGrid.printGrid();
-				System.out.println("You lost!");
-				break;
-			}
-			
+						
 			if (theGrid.checkIfGridFull() == true) {
 				theGrid.printGrid();
 				System.out.println("It was a tie!");
@@ -36,6 +30,12 @@ public class TicTacToe {
 			}
 						
 			computerMove();
+			
+			if (theGrid.checkIfThreeOInARow() == true) {
+				theGrid.printGrid();
+				System.out.println("You lost!");
+				break;
+			}
 		}
 		
 	}
